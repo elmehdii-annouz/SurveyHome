@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/background_color">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/imagePlaceholder"
+            android:layout_width="111dp"
+            android:layout_height="72dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="-3dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/fiberhome" />
+
+        <Button
+            android:id="@+id/addPlaqueButton"
+            android:layout_width="202dp"
+            android:layout_height="71dp"
+            android:layout_alignTop="@id/imagePlaceholder"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="6dp"
+            android:layout_toEndOf="@id/imagePlaceholder"
+            android:backgroundTint="#07166A"
+            android:fontFamily="@font/robotobold"
+            android:text="Ajouter Plaque"
+
+            android:textColor="@android:color/white" />
+
+        <LinearLayout
+            android:id="@+id/plaqueContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imagePlaceholder"
+            android:layout_marginTop="24dp"
+            android:orientation="vertical" />
+
+    </RelativeLayout>
+
+</ScrollView>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:background="@drawable/item_rounded_border"
+    android:layout_marginBottom="8dp"
+    android:gravity="center_horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/villeNameTextView"
+            android:layout_width="135dp"
+            android:layout_height="77dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:paddingStart="50dp"
+            android:fontFamily="@font/robotobold"
+            android:text="Ville Name"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            tools:ignore="RtlCompat" />
+
+        <Button
+            android:id="@+id/deleteVilleButton"
+            android:layout_width="42dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:backgroundTint="@color/black"
+            android:drawableRight="@drawable/delete"
+            android:fontFamily="@font/robotobold"
+            android:textColor="@android:color/white"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"> <!-- Horizontal layout for the 'Voir les Plaques' button -->
+
+        <Button
+            android:id="@+id/voirLesPlaquesButton"
+            android:layout_width="231dp"
+            android:layout_height="match_parent"
+            android:backgroundTint="#07166A"
+            android:fontFamily="@font/robotobold"
+            android:text="Voir les Plaques"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+
+</LinearLayout>

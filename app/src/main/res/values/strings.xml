@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">survey_app</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="entrez_le_nom_de_la_ville">Entrez le nom de la ville</string>
+
+    <string-array name="zone_options">
+        <item></item>
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+        <item>E</item>
+    </string-array>
+    <string-array name="sous_sol_options">
+        <item></item>
+        <item>Oui</item>
+        <item>Non</item>
+    </string-array>
+        <string-array name="type_immeuble_options">
+            <item></item>
+            <item>Maison marocaine</item>
+            <item>Institutions</item>
+            <item>Immeubles</item>
+            <item>Villa</item>
+        </string-array>
+
+        <string-array name="nbr_etages_options">
+            <item></item>
+            <item>Villa</item>
+            <item>R+1</item>
+            <item>R+2</item>
+            <item>R+3</item>
+            <item>R+4</item>
+            <item>R+5</item>
+            <item>R+6</item>
+        </string-array>
+
+        <string-array name="boitier_options">
+            <item></item>
+            <item>ADSL IAM</item>
+            <item>Fibre IAM</item>
+            <item>Fibre Orange</item>
+            <item>Fibre IAM/Orange</item>
+        </string-array>
+
+        <string-array name="remarque_options">
+            <item></item>
+            <item>Béton</item>
+            <item>Pavée</item>
+            <item>Trotoire</item>
+            <item>Goudron</item>
+        </string-array>
+
+
+</resources>

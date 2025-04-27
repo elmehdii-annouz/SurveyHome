@@ -1,0 +1,435 @@
+
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipe_refresh_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@color/background_color">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:gravity="right"
+
+                >
+
+
+                <!-- Spacer with weight to push the button to the right -->
+
+
+                <ImageView
+                    android:id="@+id/image_placeholder"
+                    android:layout_width="116dp"
+                    android:layout_height="43dp"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/fiberhome" />
+
+                <Button
+                    android:id="@+id/list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:backgroundTint="@color/white"
+                    android:drawableRight="@drawable/liste"
+                    android:fontFamily="@font/robotobold"
+                    android:text="Liste"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <GridLayout
+                android:id="@+id/input_grid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:columnCount="2"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                android:rowCount="8"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_marginBottom="4dp"
+                    android:fontFamily="@font/robotobold"
+                    android:text="   Zone"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+
+                    />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_marginBottom="4dp"
+                    android:fontFamily="@font/robotobold"
+                    android:text="   Type Immeuble"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    />
+
+                <Spinner
+                    android:id="@+id/input_zone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/input_background"
+                    android:padding="10dp"
+                    android:entries="@array/zone_options"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/roboto"
+                    style="@style/CustomSpinnerStyle" />
+
+
+
+                <Spinner
+                    android:id="@+id/input_type_immeuble"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/input_background"
+                    android:padding="10dp"
+                    android:entries="@array/type_immeuble_options"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/roboto"
+                    android:textColorHint="@color/grey" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_marginBottom="4dp"
+                    android:text="   N° Immeuble"
+                    android:fontFamily="@font/robotobold"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_marginBottom="4dp"
+                    android:text="    Nombre Étages"
+                    android:fontFamily="@font/robotobold"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    />
+                <EditText
+                    android:id="@+id/input_num_imm"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/input_background"
+                    android:padding="10dp"
+                    android:paddingStart="18dp"
+                    android:textColor="@color/text_color"
+                    android:textColorHint="@color/grey"
+                    android:fontFamily="@font/roboto"
+                    android:textSize="15dp"
+
+                    />
+
+                <Spinner
+                    android:id="@+id/input_nbr_etages"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/input_background"
+                    android:padding="10dp"
+                    android:textSize="15dp"
+                    android:entries="@array/nbr_etages_options"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/grey"
+                    android:fontFamily="@font/roboto"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_marginBottom="4dp"
+                    android:fontFamily="@font/robotobold"
+                    android:text="   Nombre B2C"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_marginBottom="4dp"
+                    android:text="   Nombre B2B"
+                    android:fontFamily="@font/robotobold"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    />
+                <EditText
+                    android:id="@+id/input_nbr_b2c"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    android:paddingStart="18dp"
+                    android:background="@drawable/input_background"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:textSize="15dp"
+                    android:textColor="@color/text_color"
+                    android:textColorHint="@color/grey"
+                    android:fontFamily="@font/roboto"/>
+
+                <!-- Nbr B2B -->
+                <EditText
+                    android:id="@+id/input_nbr_b2b"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    android:paddingStart="18dp"
+                    android:background="@drawable/input_background"
+                    android:inputType="number"
+                    android:padding="10dp"
+                    android:textSize="15dp"
+                    android:textColor="@color/text_color"
+                    android:textColorHint="@color/grey"
+                    android:fontFamily="@font/roboto"/>
+
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_marginBottom="4dp"
+                    android:text="   Boitier"
+                    android:fontFamily="@font/robotobold"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_marginBottom="4dp"
+                    android:text="   Largeur Trotoire(ML)"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/robotobold"
+                    android:textSize="14sp"
+                    />
+                <Spinner
+                    android:id="@+id/input_boitier"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/input_background"
+                    android:padding="10dp"
+                    android:entries="@array/boitier_options"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/grey"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/roboto"
+                    />
+
+                <EditText
+                    android:id="@+id/input_largeur_trotoire_ml"
+                    android:layout_width="0dp"
+                    android:paddingStart="18dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/input_background"
+                    android:inputType="numberDecimal"
+                    android:padding="10dp"
+                    android:textSize="15dp"
+                    android:textColor="@color/text_color"
+                    android:textColorHint="@color/grey"
+                    android:fontFamily="@font/roboto"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_marginBottom="4dp"
+                    android:text="  Sous-sol"
+                    android:fontFamily="@font/robotobold"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+
+                    />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_marginBottom="4dp"
+                    android:text="   Remarque"
+                    android:fontFamily="@font/robotobold"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    />
+                <Spinner
+                    android:id="@+id/input_sous_sol"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/input_background"
+                    android:padding="10dp"
+                    android:entries="@array/sous_sol_options"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/grey"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/roboto"
+                    />
+
+
+                <Spinner
+                    android:id="@+id/input_remarque"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/input_background"
+                    android:padding="10dp"
+                    android:entries="@array/remarque_options"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/grey"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/roboto"
+                    />
+
+
+                 <EditText
+                android:id="@+id/input_latitude"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                android:background="@drawable/rounded_edit_text_background"
+                android:inputType="none"
+                android:padding="10dp"
+                android:textSize="16dp"
+                android:fontFamily="@font/roboto"
+                android:textColor="@color/text_color"
+                android:textColorHint="@color/hint_text_color"
+              />
+
+
+
+
+                <EditText
+                    android:id="@+id/input_longitude"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/rounded_edit_text_background"
+                    android:textSize="16dp"
+                    android:inputType="none"
+                    android:padding="10dp"
+                    android:textColor="@color/text_color"
+                    android:fontFamily="@font/roboto"
+                    android:textColorHint="@color/hint_text_color"
+                    />
+
+            </GridLayout>
+            <EditText
+                android:id="@+id/plaquename"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                android:background="@drawable/input_background"
+                android:hint="Nom PLaque"
+                android:padding="10dp"
+                android:textColor="@color/text_color"
+                android:fontFamily="@font/roboto"
+                android:textColorHint="@color/grey"
+                android:textSize="15dp"
+                android:visibility="gone"
+                />
+            <EditText
+                android:id="@+id/villename"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                android:background="@drawable/input_background"
+                android:hint="Nom Ville"
+                android:padding="10dp"
+                android:textColor="@color/text_color"
+                android:fontFamily="@font/roboto"
+                android:textColorHint="@color/grey"
+                android:textSize="15dp"
+                android:visibility="gone"
+
+                />
+
+            <EditText
+                android:id="@+id/input_rue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_margin="8dp"
+                android:background="@drawable/input_background"
+                android:hint="Rue"
+                android:padding="10dp"
+                android:textColor="@color/text_color"
+                android:fontFamily="@font/roboto"
+                android:textColorHint="@color/grey"
+                android:textSize="15dp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                tools:ignore="WebViewLayout">
+
+                <WebView
+                    android:id="@+id/map_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="#e0e0e0"
+                    android:layout_gravity="center" />
+            </androidx.cardview.widget.CardView>
+            <Button
+                android:id="@+id/save_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:padding="10dp"
+                android:text="Enregistrer"
+                android:textColor="@color/white"
+                android:fontFamily="@font/robotobold"
+                android:backgroundTint="#07166A" />
+
+
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
