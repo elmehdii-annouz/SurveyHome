@@ -1,5 +1,4 @@
-
-                               ![Screenshot 2024-09-09 042025](https://github.com/user-attachments/assets/7fb5a400-4283-41e2-b01c-28d5e5e7f330)
+  ![Screenshot 2024-09-09 042025](https://github.com/user-attachments/assets/7fb5a400-4283-41e2-b01c-28d5e5e7f330)
 
 
 Cette application Android permet de réaliser un sondage sur le terrain dans les villes ciblées. Elle collecte des données telles que :
